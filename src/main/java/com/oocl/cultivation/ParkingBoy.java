@@ -1,25 +1,19 @@
 package com.oocl.cultivation;
 
 public class ParkingBoy {
-
-    private final ParkingLot parkingLot;
-    private String lastErrorMessage;
+    private ParkingLot parkingLot;
 
     public ParkingBoy(ParkingLot parkingLot) {
+        // TODO Auto-generated constructor stub
         this.parkingLot = parkingLot;
     }
 
     public ParkingTicket park(Car car) {
-        // TODO: Please implement the method
-        throw new RuntimeException("Not implemented");
+        // TODO Auto-generated method stub
+        return parkingLot.parkCar(car);
     }
 
     public Car fetch(ParkingTicket ticket) {
-        // TODO: Please implement the method
-        throw new RuntimeException("Not implemented");
-    }
-
-    public String getLastErrorMessage() {
-        return lastErrorMessage;
+        return parkingLot.pickCar(ticket);
     }
 }

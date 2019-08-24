@@ -4,18 +4,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ParkingLot {
-    private final int capacity;
-    private Map<ParkingTicket, Car> cars = new HashMap<>();
+    private Car car;
+   // Private ParkingTicket ticket;
 
-    public ParkingLot() {
-        this(10);
+    public ParkingTicket parkCar(Car car) {
+        this.car = car;
+        return new ParkingTicket();
     }
 
-    public ParkingLot(int capacity) {
-        this.capacity = capacity;
+    public Car pickCar(ParkingTicket ticket) {
+        // TODO Auto-generated method stub
+       // this.ticket = ticket;
+        return car;
     }
 
-    public int getAvailableParkingPosition() {
-        return cars.size() - capacity;
-    }
 }
